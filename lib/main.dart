@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supervision/views/authenticationPage.dart';
 
-int userAge = 0;
-
 void main() {
   runApp(const MyApp());
 }
