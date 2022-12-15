@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supervision/views/authenticationPage.dart';
+import 'package:supervision/views/orderPage.dart';
 
 int userAge = 0;
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const AuthenticationPage(),
+      home: const OrderPage(),
     );
   }
 }
