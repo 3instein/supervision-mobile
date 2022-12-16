@@ -7,6 +7,21 @@ void main() {
   runApp(const MyApp());
 }
 
+Map<int, Color> color = {
+  50: const Color.fromRGBO(208, 188, 255, .1),
+  100: const Color.fromRGBO(208, 188, 255, .2),
+  200: const Color.fromRGBO(208, 188, 255, .3),
+  300: const Color.fromRGBO(208, 188, 255, .4),
+  400: const Color.fromRGBO(208, 188, 255, .5),
+  500: const Color.fromRGBO(208, 188, 255, .6),
+  600: const Color.fromRGBO(208, 188, 255, .7),
+  700: const Color.fromRGBO(208, 188, 255, .8),
+  800: const Color.fromRGBO(208, 188, 255, .9),
+  900: const Color.fromRGBO(208, 188, 255, 1),
+};
+
+MaterialColor colorCustom = MaterialColor(0xFFD0BCFF, color);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -26,7 +41,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: colorCustom,
       ),
       home: const AuthenticationPage(),
     );
