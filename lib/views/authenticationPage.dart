@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_session/flutter_session.dart';
+import 'package:supervision/models/services/services.dart';
 import 'package:supervision/views/components/bottomNavigation.dart';
 
 class AuthenticationPage extends StatefulWidget {
@@ -86,12 +88,9 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                         borderRadius: BorderRadius.circular(100),
                       ),
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: ((context) =>
-                                  const BottomNavigation())));
+                    onPressed: () async {
+                      UserService().authenticate("test", "test");
+                      print(await FlutterSession().get("user"));
                     },
                     child: const Text("Masuk"),
                   ),
