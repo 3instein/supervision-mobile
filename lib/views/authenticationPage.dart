@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:supervision/views/components/bottomNavigation.dart';
 
 class AuthenticationPage extends StatefulWidget {
   const AuthenticationPage({super.key});
@@ -87,7 +86,13 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                         borderRadius: BorderRadius.circular(100),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) =>
+                                  const BottomNavigation())));
+                    },
                     child: const Text("Masuk"),
                   ),
                 ),
